@@ -1,0 +1,20 @@
+{
+  "appId": "com.bluroutine.app",
+  "appName": "Bluroutine",
+  "webDir": "build",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "transparent",
+      "overlaysWebView": true
+    },
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#ffffff",
+      "showSpinner": false
+    }
+  }
+}

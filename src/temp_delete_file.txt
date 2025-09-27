@@ -1,0 +1,1 @@
+This file is created to help delete ActivityManageModal.tsx by overwriting it
