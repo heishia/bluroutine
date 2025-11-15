@@ -21,16 +21,16 @@ export function WeeklyProgress({ weekData, onDateClick }: WeeklyProgressProps) {
   };
 
   return (
-    <div className="bg-white px-0 py-2">
-      <div className="flex justify-center space-x-4 max-w-2xl mx-auto px-6">
+    <div className="bg-white px-3 sm:px-4 md:px-6 py-2">
+      <div className="flex justify-between items-center max-w-2xl mx-auto gap-1 sm:gap-2">
         {weekData.map((day, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <span className="text-sm text-gray-600 mb-1">{day.day}</span>
+          <div key={index} className="flex flex-col items-center flex-1 min-w-0">
+            <span className="text-xs sm:text-sm text-gray-600 mb-1">{day.day}</span>
             <div 
-              className={`w-10 h-10 rounded-full ${getCircleColor(day.achievement, day.isRestDay)} flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity`}
+              className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full ${getCircleColor(day.achievement, day.isRestDay)} flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0`}
               onClick={() => onDateClick?.(day.date, day.day, day.dateString)}
             >
-              <span className="text-white text-sm font-medium">
+              <span className="text-white text-xs sm:text-sm font-medium">
                 {day.date}
               </span>
             </div>

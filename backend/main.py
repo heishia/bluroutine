@@ -31,6 +31,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# 서버 시작 시 테스트 데이터 초기화
+@app.on_event("startup")
+async def startup_event():
+    """서버 시작 시 테스트 데이터 초기화"""
+    from utils.database import init_test_data
+    init_test_data()
+
 # 라우터 등록
 app.include_router(auth_router)
 app.include_router(routines_router)

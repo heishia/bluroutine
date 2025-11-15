@@ -6,7 +6,7 @@ const isMobile = typeof window !== 'undefined' && (window as any).Capacitor !== 
 
 // 백엔드 API 기본 URL
 export const API_BASE_URL = isProduction || isMobile 
-  ? 'http://192.168.219.106:3001'  // 로컬 네트워크 IP 주소
+  ? 'https://bluroutine-production.up.railway.app'  // Railway 배포 서버
   : 'http://localhost:3001';  // 개발 환경
 
 // axios 인스턴스 생성
